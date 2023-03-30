@@ -2,7 +2,7 @@ FROM node:lts
 
 WORKDIR /app
 
-COPY ["package*.json",  "components/*",  ./ 
+COPY ["package*.json",  "components/*",  "./"] 
 
 Run npm install
 
