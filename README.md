@@ -5,7 +5,9 @@
 This project is a weightloss calculator which can calculate a possible % of weightloss possible of the user weight each week.  
 This is built using Next.js, and Plotly, a graphing library for creating interactive visualizations. In this guide, you will find instructions on how to launch the project using GitHub Codespaces with Visual Studio Code, which will build the development environment using a Dockerfile in a devcontainer. Additionally, you will find information on how to work with branches in Git using trunk-based development.
 
-## Launching the Project Using GitHub Codespaces with Visual Studio Code
+## Getting Started
+
+### Launching the Project Using GitHub Codespaces with Visual Studio Code
 
 GitHub Codespaces is a cloud-based development environment that allows you to contribute to projects without setting up your local development environment. The project uses a Dockerfile in a devcontainer to build the development environment for Codespaces. To launch the project using Codespaces, follow the steps below:
 
@@ -22,7 +24,7 @@ npm run dev
 Open your browser and navigate to http://localhost:3000 to view the project.
 
 
-## Trunk-Based Development with Git
+### Trunk-Based Development with Git
 Trunk-based development is a branching strategy where developers work on short-lived branches that are merged back into the main branch (usually called main or master). By following trunk-based development practices, you can ensure that your changes are frequently integrated into the main branch, reducing the risk of merge conflicts and making it easier to maintain the project Follow these steps to create branches and work with them using common Git commands:
 
 1. Make sure you have the latest version of the main branch:
