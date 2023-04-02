@@ -1,38 +1,66 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+# WeightlossCalc 
 
-First, run the development server:
+## Summary 
+This project is a weightloss calculator which can calculate a possible % of weightloss possible of the user weight each week.  
+This is built using Next.js, and Plotly, a graphing library for creating interactive visualizations. In this guide, you will find instructions on how to launch the project using GitHub Codespaces with Visual Studio Code, which will build the development environment using a Dockerfile in a devcontainer. Additionally, you will find information on how to work with branches in Git using trunk-based development.
 
-```bash
+## Launching the Project Using GitHub Codespaces with Visual Studio Code
+
+GitHub Codespaces is a cloud-based development environment that allows you to contribute to projects without setting up your local development environment. The project uses a Dockerfile in a devcontainer to build the development environment for Codespaces. To launch the project using Codespaces, follow the steps below:
+
+
+1. Open the  repository and click on the "Code" button.
+2. In the dropdown menu, click on "Open with Codespaces" and then click "New codespace."
+3. GitHub Codespaces will use the Dockerfile and the .devcontainer configuration to build the development environment. Wait for GitHub to create and configure the codespace. This process may take a few minutes.
+4. Once the codespace is ready, Visual Studio Code will open in your browser. You can now access and edit the project files. You may need to install an extension to allow the codespace to run.
+
+To launch the development server, run:
+```
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+```
+Open your browser and navigate to http://localhost:3000 to view the project.
+
+
+## Trunk-Based Development with Git
+Trunk-based development is a branching strategy where developers work on short-lived branches that are merged back into the main branch (usually called main or master). By following trunk-based development practices, you can ensure that your changes are frequently integrated into the main branch, reducing the risk of merge conflicts and making it easier to maintain the project Follow these steps to create branches and work with them using common Git commands:
+
+1. Make sure you have the latest version of the main branch:
+
+```
+git checkout main
+git pull
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Create a new branch for your feature or bugfix:
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+```
+git checkout -b <branch-name>
+```
+Replace <branch-name> with a descriptive name for your branch (e.g., add-user-profile or fix-login-issue).
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+3. Work on your changes, committing them as you go:
+```
+git add <file>
+git commit -m "Your commit message"
+```
+Replace <file> with the file you've changed, and "Your commit message" with a brief description of your changes.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+4. Once your changes are complete, push your branch to the remote repository:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+```
+git push -u origin <branch-name>
+```
+5. Create a pull request on GitHub to merge your changes into the main branch. Request a review from a project maintainer or another contributor.
+6. Once your pull request is approved and merged, you can delete the local branch:
+```
+git branch -d <branch-name>
+```
 
-## Learn More
+7. Update your local main branch with the latest changes:
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+```
+git checkout main
+git pull
+```
+Repeat these steps for each new feature or bugfix. 
