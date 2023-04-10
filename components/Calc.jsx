@@ -51,7 +51,7 @@ const Calc = () => {
         />
         <button type="submit">Update Chart</button>
       </form>
-      <PlotlyChart data={data} layout={CHART_LAYOUT} />
+      <PlotlyChart data={data} layout={CHART_LAYOUT} data-testid="plotly-chart"/>
     </div>
   );
 };
